@@ -1,0 +1,112 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<!-- Projects Section -->
+<section class="py-5">
+  <div class="container px-5 mb-5">
+    <div class="text-center mb-5">
+      <h1 class="display-5 fw-bolder mb-0">
+        <span class="text-gradient d-inline">Projects</span>
+      </h1>
+    </div>
+    <div class="row gx-5 justify-content-center">
+      <div class="col-lg-11 col-xl-9 col-xxl-8">
+        <!-- Project Card 1 -->
+        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+          <div class="card-body p-0">
+            <div class="d-flex">
+              <div class="text-content p-5">
+                <h2 class="fw-bolder">Amazon Page (HTML & CSS)</h2>
+                <p>
+                  I created a static Amazon-like ecommerce page using pure HTML
+                  and CSS. The website replicates the Amazon homepage layout
+                  featuring a navigation bar with location and account options,
+                  a functional search bar, product category panels, and detailed
+                  product display sections. I focused on building a clean,
+                  user-friendly interface with clear navigation and product
+                  highlighting to provide an intuitive shopping experience. This
+                  project helped me practice responsive design, CSS Flexbox,
+                  grid layouts, and integrating FontAwesome icons for better
+                  visuals.
+                </p>
+              </div>
+              <img
+                class="img-fluid"
+                src="{% static 'assets/amazon.png' %}"
+                alt="Amazon Page Screenshot"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+          <div class="card-body p-0">
+            <div class="d-flex">
+              <div class="text-content p-5">
+                <h2 class="fw-bolder">Grocery Website (HTML, CSS & JS)</h2>
+                <p>
+                  This project is a fully responsive and interactive Grocery
+                  Store website designed using HTML, CSS, and JavaScript. It
+                  features a dynamic navigation bar, search functionality, and
+                  an easy-to-use shopping cart interface. Users can browse
+                  through various product categories such as fresh fruits,
+                  vegetables, dairy, and meats, all visually presented with
+                  product images, descriptions, and prices. The website includes
+                  engaging features like product sliders, customer reviews, and
+                  a blog section to enhance user experience. Special care was
+                  taken to ensure mobile responsiveness and seamless animations
+                  using CSS Flexbox, Grid, and the Swiper.js slider library.
+                  This project helped me sharpen my frontend development skills
+                  and create an appealing e-commerce interface.
+                </p>
+              </div>
+              <img
+                class="img-fluid2"
+                src="{% static 'assets/Grocery.png' %}"
+                alt="Grocery Website Screenshot"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="card overflow-hidden shadow rounded-4 border-0">
+          <div class="card-body p-0">
+            <div class="d-flex">
+              <div class="text-content p-5">
+                <h2 class="fw-bolder">
+                  Restaurant Website (Python, Django, HTML, CSS & JS)
+                </h2>
+                <p>
+                  Built a fully functional restaurant website using the Django
+                  framework with HTML, CSS, and JavaScript for frontend,
+                  featuring menu management, reservations, and user
+                  interactions.
+                </p>
+              </div>
+              <img
+                class="img-fluid"
+                src="{% static 'img/restaurant-screenshot.png' %}"
+                alt="Restaurant Website Screenshot"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to action section -->
+<section class="py-5 bg-gradient-primary-to-secondary text-white">
+  <div class="container px-5 my-5">
+    <div class="text-center">
+      <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
+      <a
+        class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder"
+        href="{% url 'contact:index' %}"
+        >Contact me</a
+      >
+    </div>
+  </div>
+</section>
+{% endblock %}
