@@ -12,11 +12,11 @@ class Homepage(models.Model):
     about_title = models.CharField(max_length=100)
     about_description = models.TextField()
 
-    def full_clean(self, *args, **kwargs):
+    def save(self, *args, **kwargs):
         if not self.pk and Homepage.objects.exists():
             raise ValidationError(
                 message="Only one Homepage instance is allowed.")
-        super().full_clean(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return "Homepage Content"

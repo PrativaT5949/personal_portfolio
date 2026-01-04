@@ -15,3 +15,6 @@ def project(request):
 
 def resume(request):
     return render(request, 'resume.html')
+
+def index(request):
+    return render(request, 'contact/contact/index.html')
