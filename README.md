@@ -36,4 +36,4 @@ The website is designed to be **responsive**, **mobile friendly**, and easy to n
 
 ##Screenshort
 **HomePage**
-[!HomePage](images/Home.png)
+![HomePage](images/Home.png)
