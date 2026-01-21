@@ -36,7 +36,7 @@ ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
 DEBUG = False
 
 ALLOWED_HOSTS = [ 
- "yourapp.onrender.com",  
+ "personalportfolio-51pa.onrender.com",  
     "prativathapa.com.np",      
     "www.prativathapa.com.np",  
     "localhost",
