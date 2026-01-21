@@ -98,12 +98,9 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',  
-        'NAME': os.environ.get('DB_NAME', 'portfolio'),   # fallback 'portfolio' for local dev
-        'USER': os.environ.get('DB_USER', 'root'),        # fallback 'root' for local dev
-        'PASSWORD': os.environ.get('DB_PASSWORD', ''),    # fallback empty password for local dev
-        'HOST': os.environ.get('DB_HOST', 'localhost'),   # fallback localhost for local dev
-        'PORT': os.environ.get('DB_PORT', '3307'),        # fallback 3307 for local dev
+        
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
