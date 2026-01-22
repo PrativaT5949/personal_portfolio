@@ -11,7 +11,7 @@
   --bs-teal: #20c997;
   --bs-cyan: #0dcaf0;
   --bs-black: #000;
-  --bs-white: #fff;
+  --bs-white: #cb4dac;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
   --bs-gray-100: #f8f9fa;
@@ -648,6 +648,16 @@ progress {
   object-fit: contain;
   max-height: 550px;
   max-width: 400px;
+}
+.project-image {
+  max-width: 450px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .project-image {
+    max-width: 100%;
+  }
 }
 
 .img-fluid2 {
@@ -4382,12 +4392,12 @@ fieldset:disabled .btn {
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(230, 170, 247);
   transition: background-color 0.3s ease;
 }
 
@@ -7934,13 +7944,13 @@ fieldset:disabled .btn {
   --bs-aspect-ratio: 42.8571428571%;
 }
 
-.fixed-top {
+/* .fixed-top {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 1030;
-}
+} */
 
 .fixed-bottom {
   position: fixed;
@@ -9098,11 +9108,6 @@ fieldset:disabled .btn {
   padding-bottom: 0.5rem !important;
 }
 
-.py-3 {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
-}
-
 .py-4 {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
@@ -9507,10 +9512,25 @@ fieldset:disabled .btn {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
 }
-
 .bg-white {
   --bs-bg-opacity: 1;
+  background-color: rgb(230, 170, 247) !important;
+}
+
+/* .bg-white {
+  --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+} */
+.custom-navbar {
+  background-color: rgb(230, 120, 247) !important;
+}
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color: white !important;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #f1f1f1 !important;
 }
 
 .bg-body {
@@ -13960,4 +13980,8 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
+}
+
+.success-page .success-container {
+  margin-top: 80px; /* height of navbar */
 }
