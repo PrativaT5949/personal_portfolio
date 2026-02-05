@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect 
+from django.http import HttpResponse
 from .models import Contact
-
+import re
 
 def contact_view(request):
     if request.method == 'POST':
@@ -10,6 +11,13 @@ def contact_view(request):
         message = request.POST.get('message')
 
         # Optional: You can add basic validation here
+        # if not fullname or not email or not phone or not message:
+        #     return HttpResponse("Please fill all fields.", status=400)
+
+        # 2. Validate phone number
+        # regex: optional + at start, then 10 digits
+        if not re.fullmatch(r'^\+?\d{10}$', phone):
+            return HttpResponse("Enter a valid phone number ", status=400)
         if fullname and email and message:
             # Save data to the database
             Contact.objects.create(

@@ -30,11 +30,24 @@
                                         <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                         <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                                     </div>
-                                    <!-- Phone number input-->
+                                    {% comment %} <!-- Phone number input-->
                                     <div class="form-floating mb-3">
                                         <input class="form-control" id="phone" name="phone_number" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
                                         <label for="phone">Phone number</label>
                                         <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                    </div> {% endcomment %}
+
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control" id="phone" name="phone_number" type="tel"
+                                            placeholder="(123) 456-7890"
+                                            value="{{ submitted.phone_number|default:'' }}"
+                                            pattern="^\+?\d{10}$"
+                                            title="Enter 10 digits"
+                                            required />
+                                        <label for="phone">Phone number</label>
+                                        <div class="invalid-feedback" data-sb-feedback="phone:required">
+                                            Please enter a valid phone number.
+                                        </div>
                                     </div>
                                     <!-- Message input-->
                                     <div class="form-floating mb-3">

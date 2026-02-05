@@ -1,15 +1,19 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Contact   # make sure model exists
-
+import re
 def contact_view(request):
     if request.method == "POST":
         name = request.POST.get("name")
         email = request.POST.get("email")
         message = request.POST.get("message")
+        phone = request.POST.get("phone_number")
 
-        if not name or not email or not message:
-            return HttpResponse("Please fill all fields.", status=400)
+        # if not name or not email or not message:
+        #     return HttpResponse("Please fill all fields.", status=400)
+        
+        # if not re.fullmatch(r'^\+?\d{9,15}$', phone):
+        #     return HttpResponse("Enter a valid phone number.", status=400)
 
         # save to database only
         Contact.objects.create(
