@@ -9,16 +9,28 @@
     <div class="col-lg-11 col-xl-9 col-xxl-8">
       <!-- Experience Section -->
       <section>
-        <div class="d-flex align-items-center justify-content-between mb-4">
+        <div
+          class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-3"
+        >
           <h2 class="text-primary fw-bolder mb-0">Experience</h2>
-          <a
-            class="btn btn-primary px-4 py-3"
-            href="{% static 'files/prativa_thapa_resume.pdf' %}"
-            download
-          >
-            <div class="d-inline-block bi bi-download me-2"></div>
-            Download Resume
-          </a>
+          <div class="d-flex gap-3 flex-wrap">
+            <a
+              class="btn btn-primary px-4 py-3"
+              href="{% static 'files/Prativa_Thapa_QA_CV.pdf' %}"
+              download
+            >
+              <div class="d-inline-block bi bi-download me-2"></div>
+              Download QA Resume
+            </a>
+            <a
+              class="btn btn-outline-primary px-4 py-3"
+              href="{% static 'files/Prativa_Thapa_CV.pdf' %}"
+              download
+            >
+              <div class="d-inline-block bi bi-download me-2"></div>
+              Download Backend Resume
+            </a>
+          </div>
         </div>
 
         <!-- Experience Card -->
@@ -130,6 +142,7 @@
           </div>
         </div>
       </section>
+
       <!-- Skills Section -->
       <section>
         <div class="card shadow border-0 rounded-4 mb-5">
@@ -147,29 +160,63 @@
                 </h3>
               </div>
 
-              <!-- Skills Grid -->
-              <div class="row row-cols-1 row-cols-md-3 g-4">
+              <!-- QA & Testing -->
+              <h5 class="fw-bolder text-primary mb-3">QA & Testing</h5>
+              <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
                 <div class="col">
                   <div
                     class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
                   >
-                    HTML
+                    Manual Testing
                   </div>
                 </div>
                 <div class="col">
                   <div
                     class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
                   >
-                    CSS
+                    Test Case Design
                   </div>
                 </div>
                 <div class="col">
                   <div
                     class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
                   >
-                    JavaScript
+                    Postman & API Testing
                   </div>
                 </div>
+                <div class="col">
+                  <div
+                    class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
+                  >
+                    Selenium WebDriver
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
+                  >
+                    Pytest
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
+                  >
+                    Regression Testing
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
+                  >
+                    Bug Reporting & Defect Tracking
+                  </div>
+                </div>
+              </div>
+
+              <!-- Backend Development -->
+              <h5 class="fw-bolder text-primary mb-3">Backend Development</h5>
+              <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
                 <div class="col">
                   <div
                     class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
@@ -188,14 +235,47 @@
                   <div
                     class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
                   >
-                    Postman & API Testing
+                    Django REST Framework
                   </div>
                 </div>
                 <div class="col">
                   <div
                     class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
                   >
-                    Data Structures & Algorithms
+                    PostgreSQL
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
+                  >
+                    JWT Authentication
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
+                  >
+                    Celery & Redis
+                  </div>
+                </div>
+              </div>
+
+              <!-- General / Tools -->
+              <h5 class="fw-bolder text-primary mb-3">General & Tools</h5>
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div
+                    class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
+                  >
+                    HTML & CSS
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
+                  >
+                    JavaScript
                   </div>
                 </div>
                 <div class="col">
@@ -203,6 +283,13 @@
                     class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
                   >
                     Git & GitHub
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
+                  >
+                    Data Structures & Algorithms
                   </div>
                 </div>
                 <div class="col">
