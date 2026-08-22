@@ -41,7 +41,7 @@ DEBUG = os.getenv("DEBUG", "False") == "True"
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = False
 
 ALLOWED_HOSTS = [ 
  "personalportfolio-51pa.onrender.com",  
